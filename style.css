@@ -1,0 +1,187 @@
+:root {
+    font-size: 62.5%;
+    --main-color: #dcc6fa;
+    --seconary-color: #e8dafb;
+    --btn-primary: rgb(150, 70, 159);
+    --btn-secondary: rgb(81, 23, 87);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+@font-face {
+    font-family: my-viking;
+    src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    align-items: stretch;
+}
+
+.left {
+    min-width: 30rem;
+    width: 35%;
+    height: 100vh;
+    background-image: url('assets/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.left p {
+    color: rgba(250, 232, 251, 0.472);
+}
+
+.left a {
+    color: inherit;
+}
+
+.hero {
+    background-color: #3231318f;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: my-viking, sans-serif;
+    font-size: 3rem;
+    padding: 2rem 0;
+    gap: 3rem;
+}
+
+h1 { 
+    margin: 0;
+}
+
+.hero > img {
+    height: 100%;
+}
+
+.left p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.right {
+    width: 65%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right > * {
+    padding: 0 10%;
+}
+
+.header, .input-section>h2 {
+    font-size: 2.4rem;
+}
+
+.input-section {
+    background-color: var(--seconary-color);
+    padding-bottom: 3rem;
+    box-shadow: 2px 2px 10px var(--btn-primary);
+}
+
+.input-section>h2{
+    padding: 0; 
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, h1{
+    text-transform: uppercase;
+}
+
+form label {
+    font-size: 1.6rem;
+    font-family: 'Verdana';
+    color: var(--btn-secondary);
+}
+
+input {
+    background-color: var(--seconary-color);
+    border: 2px solid grey;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    box-shadow: 2px 3px 5px 0 var(--btn-primary);
+}
+
+input:valid {
+    border-color: rgb(60, 60, 60);
+}
+
+input:invalid {
+    border-color: rgb(158, 0, 71);
+    background-color: rgb(252, 202, 224);
+}
+
+button {
+    padding: 1rem 3rem;
+    background-color: var(--btn-primary);
+    color: white;
+    border-radius: 10px;
+    font-size: 2.4rem;
+    border: none;
+    box-shadow: 4px 4px 5px var(--btn-secondary);
+}
+button:hover {
+    background-color: var(--btn-secondary)
+}
+
+.submit-section {
+    margin-top: 3rem;
+}
+
+.submit-section > p {
+    font-size: 2.4rem;
+}
+
+.submit-section>p>a{
+    color: var(--btn-primary);
+}
+.submit-section>p>a:visited {
+    color: var(--btn-secondary);
+}
+
+.error {
+    color: red;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+    .content>* {
+        width: 100%;
+    }
+}
